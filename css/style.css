@@ -29,3 +29,42 @@ header > div h1 {
     margin: 0;
     padding: 100px;
 }
+
+.carousel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-inner figure {
+    background: #d7daec;
+}
+
+.carousel .carousel-inner img {
+    margin: auto;
+    display: block;
+    width: 95%;
+}
+
+.carousel .carousel-inner img.xs {
+    max-width: 320px;
+}
+
+.carousel .carousel-inner img.sm-425 {
+    max-width: 425px;
+}
+
+.carousel .carousel-inner img.sm-768 {
+    max-width: 768px;
+}
+
+.carousel .carousel-inner img.md {
+    max-width: 1024px;
+}
+
+.carousel .carousel-inner img.lg {
+    max-width: 1200px;
+}
+
+.carousel .carousel-inner img.xl {
+    max-width: 1920px;
+}
