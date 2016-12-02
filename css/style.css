@@ -68,3 +68,48 @@ header > div h1 {
 .carousel .carousel-inner img.xl {
     max-width: 1920px;
 }
+
+main li {
+    background: #a7a6ab;
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    margin: 20px;
+}
+
+main li h4 {
+    background: radial-gradient(#647ddc,#28284a);
+    margin: 0;
+    height: 110px;
+    padding: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+main li div {
+    padding: 20px;
+}
+
+main li footer {
+    padding: 20px;
+    background: #3c3c5d;
+}
+
+main li footer p {
+    color: lightgrey;
+    line-height: 0.75em;
+}
+
+main li footer p:last-child {
+    margin-bottom: 0;
+}
+
+#achievements li div p:first-child {
+    color: #fdffad;
+}
+
+#achievements li div p:nth-child(3) {
+    height: 4.5em;
+    overflow: hidden;
+}
