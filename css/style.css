@@ -96,12 +96,18 @@ header > div h1 {
      background: rgba(100, 125, 220, 0.5);
 }
 
-.algorithms-item span {
+.algorithms-item span,
+.pattern-item span {
     color: #fdffad;
 }
 
-.algorithms-item h4 {
+.algorithms-item h4,
+.pattern-item h4 {
     height: auto;
+}
+
+.pattern-item p {
+    padding: 0 20px;
 }
 
 main ul {
