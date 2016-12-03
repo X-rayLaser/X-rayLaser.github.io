@@ -69,20 +69,61 @@ header > div h1 {
     max-width: 1920px;
 }
 
-main li {
-    background: #a7a6ab;
+.rating {
+    box-sizing: border-box;
     display: inline-block;
-    width: 300px;
-    vertical-align: top;
-    margin: 20px;
+    padding: 0 10px;
+    margin: 0;
+    height: 1em;
+}
+
+.circle {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    border: 3px solid #647ddc; 
+    padding: 0;
+    margin: 0;
+}
+
+.filled {
+    background: #5b5ad0;
+}
+
+.half-filled {
+     background: rgba(100, 125, 220, 0.5);
+}
+
+.algorithms-item span {
+    color: #fdffad;
+}
+
+.algorithms-item h4 {
+    height: auto;
+}
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+main li {
+    box-sizing: border-box;
+    background: #a7a6ab;
+    box-shadow: 2px 2px 11px 3px #000000;
+    margin: 20px auto;
+    width: 95%;
 }
 
 main li h4 {
+    box-sizing: border-box;
     background: radial-gradient(#647ddc,#28284a);
     margin: 0;
-    height: 110px;
     padding: 15px;
-    line-height: 1.5;
+    line-height: 1.5em;
     text-align: center;
     color: white;
 }
@@ -109,7 +150,34 @@ main li footer p:last-child {
     color: #fdffad;
 }
 
-#achievements li div p:nth-child(3) {
-    height: 4.5em;
-    overflow: hidden;
+@media all and (min-width:768px) {
+    main li {
+        display: inline-block;
+        width: 300px;
+        vertical-align: top;
+        margin: 20px;
+        
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -webkit-transition: transform 1s;
+        transition: transform 1s;
+    }
+
+    main li:hover {
+        -ms-transform: scale(1.5, 1.5);
+        -o-transform: scale(1.5, 1.5);
+        -moz-transform: scale(1.5, 1.5);
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5,1.5);
+    }
+    
+    main li h4 {
+        height: 110px;
+    }
+    
+    #achievements li div p:nth-child(3) {
+        height: 5.5em;
+        overflow: hidden;
+    }
 }
