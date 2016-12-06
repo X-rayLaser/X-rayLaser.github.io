@@ -3,8 +3,28 @@ body {
 }
 
 header {
-    height: 580px;
+    height: 280px;
     background-image: url('../images/header-image.png');
+}
+
+@media all and (min-width:768px) {
+    
+    header {
+        height: 580px;
+    }
+}
+
+
+nav ul {
+    background: #384071;
+}
+
+nav ul.nav a {
+    color: white;
+}
+
+nav ul.nav a:hover {
+    color: #2260a0;
 }
 
 .carousel {
@@ -44,6 +64,10 @@ header {
 
 .carousel .carousel-inner img.xl {
     max-width: 1920px;
+}
+
+main > section {
+    padding: 0 1%;
 }
 
 main ul {
@@ -194,6 +218,34 @@ main li footer p:last-child {
     padding: 0 20px;
 }
 
+main + footer {
+    background: #074367;
+    padding: 30px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+main + footer h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main + footer p {
+    padding: 20px;
+    background: radial-gradient(#2260a0, #074367);
+    width: 95%;
+    margin: auto;
+    border-radius: 50px;
+}
+
+main + footer a {
+    color: white; 
+}
+
+main + footer a:hover {
+    color: #59c16a;
+}
+
 @media all and (min-width:768px) {
     main li {
         display: inline-block;
@@ -225,5 +277,10 @@ main li footer p:last-child {
     #achievements li div p:nth-child(3) {
         height: 5.5em;
         overflow: hidden;
+    }
+    
+    
+    main + footer p {
+        width: 40%;
     }
 }
