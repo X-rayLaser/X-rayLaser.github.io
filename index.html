@@ -31,7 +31,7 @@
 <body>
     <header>
     </header>
-    <nav>
+    <nav id="main-navbar">
         <ul class="nav nav-pills">
             <li role="presentation" class="active">
                 <a href="#">Home</a>
@@ -75,289 +75,76 @@
         </section>
         <section id="portfolio">
             <h2>Portfolio</h2>
-            <div id="screenshots-320" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/320x887.png" class="xs" alt="portfolio">
-                        </figure>
+            <nav class="my-menu">
+                <button id="show-xs" class="my-menu-btn-active">Extra small (425px)</button>
+                <button id="show-sm">Small (768px)</button>
+                <button id="show-md">Medium (1024px)</button>
+                <button id="show-lg">Large (1200px)</button>
+                <button id="show-xl">Extra large (1920px)</button>
+            </nav>
+            <div class="container-fluid">
+                <div id="extra-small-screens" class="row my-image-group">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <img src="images/screenshots/webpage01/320x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/320x887.png" class="xs" alt="portfolio">
-                        </figure>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <img src="images/screenshots/webpage02/320x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/320x887.png" class="xs" alt="portfolio">
-                        </figure>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <img src="images/screenshots/webpage04/320x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/320x887.png" class="xs" alt="portfolio">
-                        </figure>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <img src="images/screenshots/webpage05/320x887.png">
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-320" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-320" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            
-            <div id="screenshots-425" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/425x887.png" class="sm-425" alt="portfolio">
-                        </figure>
+                <div id="small-screens" class="row my-image-group hidden">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/screenshots/webpage01/768x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/425x887.png" class="sm-425" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/screenshots/webpage02/768x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/425x887.png" class="sm-425" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/screenshots/webpage04/768x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/425x887.png" class="sm-425" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/screenshots/webpage05/768x887.png">
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-425" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-425" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            
-            <div id="screenshots-768" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/768x887.png" class="sm-768" alt="portfolio">
-                        </figure>
+                <div id="medium-screens" class="row my-image-group hidden">
+                    <div class="col-md-6">
+                        <img src="images/screenshots/webpage01/1024x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/768x887.png" class="sm-768" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6">
+                        <img src="images/screenshots/webpage02/1024x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/768x887.png" class="sm-768" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6">
+                        <img src="images/screenshots/webpage04/1024x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/768x887.png" class="sm-768" alt="portfolio">
-                        </figure>
+                    <div class="col-md-6">
+                        <img src="images/screenshots/webpage05/1024x887.png">
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-768" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-768" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div id="screenshots-1024" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/1024x887.png" class="md" alt="portfolio">
-                        </figure>
+                <div id="large-screens" class="row my-image-group hidden">
+                    <div class="col-lg-6">
+                        <img src="images/screenshots/webpage01/1200x838.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/1024x887.png" class="md" alt="portfolio">
-                        </figure>
+                    <div class="col-lg-6">
+                        <img src="images/screenshots/webpage02/1200x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/1024x887.png" class="md" alt="portfolio">
-                        </figure>
+                    <div class="col-lg-6">
+                        <img src="images/screenshots/webpage04/1200x887.png">
                     </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/1024x887.png" class="md" alt="portfolio">
-                        </figure>
+                    <div class="col-lg-6">
+                        <img src="images/screenshots/webpage05/1200x887.png">
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-1024" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-1024" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div id="screenshots-1200" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/1200x838.png" class="lg" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/1200x887.png" class="lg" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/1200x887.png" class="lg" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/1200x887.png" class="lg" alt="portfolio">
-                        </figure>
-                    </div>
+                <div id="extra-large-screens" class="row my-image-group hidden">
+                    <img src="images/screenshots/webpage01/1920x1080.png">
+                    <img src="images/screenshots/webpage02/1920x1080.png">
+                    <img src="images/screenshots/webpage04/1920x1080.png">
+                    <img src="images/screenshots/webpage05/1920x1080.png">
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-1200" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-1200" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div id="screenshots-1920" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage01/1920x1080.png" class="xl" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage02/1920x1080.png" class="xl" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage04/1920x1080.png" class="xl" alt="portfolio">
-                        </figure>
-                    </div>
-                    <div class="item">
-                        <figure>
-                            <div class="carousel-caption">
-                                <h3>smaller than 425 pixels</h3>
-                            </div>
-                            <img src="images/screenshots/webpage05/1920x1080.png" class="xl" alt="portfolio">
-                        </figure>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#screenshots-1920" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#screenshots-1920" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </section>
         <section id="skills">

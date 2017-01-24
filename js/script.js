@@ -131,4 +131,86 @@ $(document).ready(function() {
     fillinAlgos();
     fillinPatterns();
     fillinCourses();
+    
+    
+    var xsElement = document.getElementById("extra-small-screens");
+    var smElement = document.getElementById("small-screens");
+    var mdElement = document.getElementById("medium-screens");
+    var lgElement = document.getElementById("large-screens");
+    var xlElement = document.getElementById("extra-large-screens");
+    
+    var xsButton = document.getElementById("show-xs");
+    var smButton = document.getElementById("show-sm");
+    var mdButton = document.getElementById("show-md");
+    var lgButton = document.getElementById("show-lg");
+    var xlButton = document.getElementById("show-xl");
+    
+    
+    function hideAllScreenshots() {
+        $(xsElement).removeClass("visible");
+        $(xsButton).removeClass("my-menu-btn-active");
+        $(xsElement).addClass("hidden");
+        
+        $(smElement).removeClass("visible");
+        $(smButton).removeClass("my-menu-btn-active");
+        $(smElement).addClass("hidden");
+        
+        $(mdElement).removeClass("visible");
+        $(mdButton).removeClass("my-menu-btn-active");
+        $(mdElement).addClass("hidden");
+        
+        $(lgElement).removeClass("visible");
+        $(lgButton).removeClass("my-menu-btn-active");
+        $(lgElement).addClass("hidden");
+        
+        $(xlElement).removeClass("visible");
+        $(xlButton).removeClass("my-menu-btn-active");
+        $(xlElement).addClass("hidden");
+    }
+    
+    xsButton.addEventListener("click", function() {
+        hideAllScreenshots();
+        $(xsElement).removeClass("hidden");
+        $(xsElement).addClass("visible");
+        $(xsButton).addClass("my-menu-btn-active");
+    });
+    
+    smButton.addEventListener("click", function() {
+        hideAllScreenshots();
+        $(smElement).removeClass("hidden");
+        $(smElement).addClass("visible");
+        $(smButton).addClass("my-menu-btn-active");
+    });
+    
+    mdButton.addEventListener("click", function() {
+        hideAllScreenshots();
+        $(mdElement).removeClass("hidden");
+        $(mdElement).addClass("visible");
+        $(mdButton).addClass("my-menu-btn-active");
+    });
+    
+    lgButton.addEventListener("click", function() {
+        hideAllScreenshots();
+        $(lgElement).removeClass("hidden");
+        $(lgElement).addClass("visible");
+        $(lgButton).addClass("my-menu-btn-active");
+    });
+    
+    xlButton.addEventListener("click", function() {
+        hideAllScreenshots();
+        $(xlElement).removeClass("hidden");
+        $(xlElement).addClass("visible");
+        $(xlButton).addClass("my-menu-btn-active");
+    });
+    
+    
+    window.addEventListener("scroll", function() {
+        var navElement = document.getElementById("main-navbar");
+        var rect = navElement.getBoundingClientRect();
+        if (rect.top <=0) {
+            $(navElement).addClass("my-fixed-top");
+        } else {
+            $(navElement).removeClass("my-fixed-top");
+        }
+    });
 });

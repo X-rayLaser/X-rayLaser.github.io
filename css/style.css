@@ -246,6 +246,49 @@ main + footer a:hover {
     color: #59c16a;
 }
 
+.my-image-group {
+    margin: 20px 0;
+}
+
+.my-image-group img {
+    width: 100%;
+    margin: 10px 0;
+    border: 3px solid #2d2479;
+    border-radius: 25px;
+}
+
+.my-menu {
+    text-align: center;
+}
+
+.my-menu button {
+    border-radius: 15px;
+    padding: 10px 0;
+    border: 3px solid #d69b9b;
+    background: #f3e6e6;
+    width: 180px;
+    margin: 10px;
+}
+
+.my-menu button:hover {
+    background: #965b4b;
+}
+
+.my-menu button.my-menu-btn-active {
+    background: #402071;
+    color: rgb(255, 202, 0);
+    font-weight: bold;
+    border-color: #000000;
+}
+
+.my-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
 @media all and (min-width:768px) {
     main li {
         display: inline-block;
