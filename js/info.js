@@ -56,35 +56,39 @@ languages.push(Language("Scala", "4 months", "*Worked on last project in March 2
 languages.push(Language("Java", "~1 year", "*Worked on last project in June 2016",
             "3.1 of 5.0 - above average (Upwork test)", 3));
 
-languages.push(Language("Python", "6 months", "*Coding from time to time",
-            "2.5 of 5.0 (Self-proclaimed)", 3));
+languages.push(Language("Python", "12 months", "*Coding from time to time",
+            "2.5 of 5.0 (Self-proclaimed)", 4));
 
-languages.push(Language("HTML", "More than 6 months", "*I have been using it since June 2016",
-            "3.3 of 5.0 (Self-proclaimed)", 4));
+languages.push(Language("HTML", "More than 12 months", "*I have been using it since June 2016",
+            "3.3 of 5.0 (Self-proclaimed)", 8));
 
-languages.push(Language("CSS", "More than 6 months", "*I have been using it since June 2016",
-            "4.0 of 5.0 - top 20% (Upwork test)", 4));
+languages.push(Language("CSS", "More than 12 months", "*I have been using it since June 2016",
+            "4.0 of 5.0 - top 20% (Upwork test)", 8));
 
-languages.push(Language("JavaScript", "4 months", "*In the process of learning it",
-            "3.4 of 5.0 (Self-proclaimed)", 4));
+languages.push(Language("JavaScript", "10 months", "*In the process of learning it",
+            "3.4 of 5.0 (Self-proclaimed)", 8));
 
 
 
 var libraries = [];
 
-libraries.push(Language("Bootstrap", "3 months", "*I am still learning it",
+libraries.push(Language("Bootstrap", "8 months", "*I am still learning it",
+            "2.5/5.0 (Self-proclaimed)", 6));
+
+libraries.push(Language("Jquery", "8 months", "*Using it periodically",
+            "3.5/5.0 (Self-proclaimed)", 6));
+
+libraries.push(Language("Django", "10 months", "*I'm still learning it",
+            "2.6/5.0 (Self-proclaimed)", 4));
+
+libraries.push(Language("SASS preprocessor", "6 months", "*I'm still learning it",
+            "3.0/5.0 (Self-proclaimed)", 6));
+
+libraries.push(Language("KnockoutJS", "4 months", "*I'm still learning it",
             "2.5/5.0 (Self-proclaimed)", 3));
 
-libraries.push(Language("Jquery", "3 months", "*Using it periodically",
-            "3.5/5.0 (Self-proclaimed)", 3));
-
-libraries.push(Language("Django", "4 months", "*I'm still learning it",
-            "2.6/5.0 (Self-proclaimed)", 3));
-
-libraries.push(Language("SASS preprocessor", "1 month", "*I'm still learning it",
-            "3.0/5.0 (Self-proclaimed)", 2));
-
-
+libraries.push(Language("ReactJS", "2 months", "*I'm still learning it",
+            "2.0/5.0 (Self-proclaimed)", 1));
 
 var algorithms = [];
 
@@ -98,19 +102,15 @@ algorithms.push(Algorithm("Quick sort", 3.5));
 
 algorithms.push(Algorithm("Binary trees", 3.5));
 
-algorithms.push(Algorithm("Red-Black Trees", 2));
-
-algorithms.push(Algorithm("Hash Tables", 2.5));
-
 algorithms.push(Algorithm("Trie(s)", 4));
 
 algorithms.push(Algorithm("Depth First Search", 4));
 
 algorithms.push(Algorithm("Breadth First Search", 3.5));
 
-algorithms.push(Algorithm("Kruskal's algorithm", 3));
+//algorithms.push(Algorithm("Kruskal's algorithm", 3));
 
-algorithms.push(Algorithm("Dijkstra's algorithm", 2));
+//algorithms.push(Algorithm("Dijkstra's algorithm", 1));
 
 
 
@@ -138,9 +138,9 @@ patterns.push(Pattern("Adapter", 2.5, "never"));
 
 patterns.push(Pattern("Composite Pattern", 2.5, "once or twice"));
 
-patterns.push(Pattern("Builder", 1.5, "never"));
+patterns.push(Pattern("Facade", 2.5, "never"));
 
-patterns.push(Pattern("Algorithm", 1, "never"));
+patterns.push(Pattern("Constructor", 3, "sometimes"));
 
 
 

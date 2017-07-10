@@ -25,8 +25,30 @@ $(document).ready(function() {
         };
         
         Sammy(function() {
+            function removeClassFromAll() {
+                $('#main-navbar ul li').removeClass('active');
+            }
+            
             this.get('#:section', function() {
-                self.shownSection(this.params.section);
+                var section = this.params.section;
+                self.shownSection(section);
+                
+                if (section === "about") {
+                    removeClassFromAll();
+                    $('#main-navbar ul li:nth-child(1)').addClass("active");
+                } else if (section === "portfolio") {
+                    removeClassFromAll();
+                    $('#main-navbar ul li:nth-child(2)').addClass("active");
+                } else if (section === "skills") {
+                    removeClassFromAll();
+                    $('#main-navbar ul li:nth-child(3)').addClass("active");
+                } else if (section === "achievements") {
+                    removeClassFromAll();
+                    $('#main-navbar ul li:nth-child(4)').addClass("active");
+                } else if (section === "contact") {
+                    removeClassFromAll();
+                    $('#main-navbar ul li:nth-child(5)').addClass("active");
+                }
             });
             
             window.location = "#about";

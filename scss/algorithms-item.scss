@@ -1,3 +1,13 @@
+.algorithms-item {
+    margin: 20px 0;
+    box-shadow: 2px 2px 11px 3px #000000;
+    
+    .algorithm-item-body {
+        background: grey;
+        padding: 20px;
+    }
+}
+
 .algorithms-item span,
 .pattern-item span {
     color: #fdffad;
@@ -6,6 +16,16 @@
 .algorithms-item h4,
 .pattern-item h4 {
     height: auto;
+}
+
+.pattern-item {
+    margin: 20px 0;
+    box-shadow: 2px 2px 11px 3px #000000;
+    
+    .pattern-item-body {
+        background: grey;
+        padding: 20px;
+    }
 }
 
 .pattern-item p {

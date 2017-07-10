@@ -1,3 +1,5 @@
+@import "heading";
+
 main ul {
     list-style-type: none;
     padding: 0;
@@ -8,18 +10,11 @@ main ul {
     box-sizing: border-box;
     background: #a7a6ab;
     box-shadow: 2px 2px 11px 3px #000000;
-    margin: 20px auto;
-    width: 95%;
+    margin: 20px 0;
 }
 
 .mooc-item h4 {
-    box-sizing: border-box;
-    background: radial-gradient(#647ddc,#28284a);
-    margin: 0;
-    padding: 15px;
-    line-height: 1.5em;
-    text-align: center;
-    color: white;
+    @extend .heading;
 }
 
 .mooc-item div {
@@ -44,14 +39,7 @@ main ul {
     color: #fdffad;
 }
 
-@media all and (min-width:768px) {
-    .mooc-item {
-        display: inline-block;
-        width: 300px;
-        vertical-align: top;
-        margin: 20px;
-    }
-    
+@media all and (min-width:768px) {    
     .mooc-item h4 {
         height: 110px;
     }

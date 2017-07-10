@@ -96,11 +96,11 @@ $(document).ready(function() {
     
     var langSection = document.getElementById("languages");
     var libSection = document.getElementById("libraries");
-    fillinSection(langSection, "Programming Languages", languages);
-    fillinSection(libSection, "Libraries and Frameworks", libraries);
+    //fillinSection(langSection, "Programming Languages", languages);
+    //fillinSection(libSection, "Libraries and Frameworks", libraries);
     
-    fillinAlgos();
-    fillinPatterns();
+    //fillinAlgos();
+    //fillinPatterns();
     
     
     var xsElement = document.getElementById("extra-small-screens");

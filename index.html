@@ -34,7 +34,7 @@
                 <a href="#skills">Skills</a>
             </li>
             <li role="presentation">
-                <a href="#achievements">Achievements</a>
+                <a href="#achievements">Online courses</a>
             </li>
             <li role="presentation">
                 <a href="#contact">Contact</a>
@@ -93,12 +93,6 @@
                         <div data-bind="foreach: techTags">
                             <span class="tag-item" data-bind="text: $data"></span>
                         </div>
-                    </section>
-                    <section>
-                        <p>Project status: <span>almost finished</span></p>
-                    </section>
-                    <section>
-                        <p>Deployed to Heroku</p>
                     </section>
                     <section>
                         <h4>Description</h4>
@@ -194,51 +188,139 @@
             </section>
         </section>
         <section id="skills" data-bind="visible: shownSection() === 'skills'">
-            <h2>Skills</h2>
-            <section id="languages">
-            </section>
+            <h2 class="text-center">Skills</h2>
+                <section id="languages">
+                    <h3 class="text-center">Programming Languages</h3>
+                    <div class="row">
+                        <div data-bind="foreach: languages">
+                            <div class="col-sm-6 col-md-4">
+                                <section class="language-item">
+                                    <h4 class="heading" data-bind="text: language"></h4>
+                                    <section>
+                                        <h5>Experience</h5>
+                                        <p data-bind="text: experience"></p>
+                                        <small data-bind="text: details"></small>
+                                    </section>
+                                    <section>
+                                        <h5>Proficiency</h5>
+                                        <ul>
+                                            <li data-bind="text: proficiency"></li>
+                                        </ul>
+                                    </section>
+                                    <section>
+                                        <h5>Usage</h5>
+                                        <p>Used in
+                                            <span data-bind="text: usageCount"></span> projects
+                                        </p>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <section id="libraries">
+                <h3 class="text-center">Libraries and Frameworks</h3>
+                <div class="row">
+                    <div data-bind="foreach: libraries">
+                        <div class="col-sm-6 col-md-4">
+                            <section class="language-item">
+                                <h4 class="heading" data-bind="text: language"></h4>
+                                <section>
+                                    <h5>Experience</h5>
+                                    <p data-bind="text: experience"></p>
+                                    <small data-bind="text: details"></small>
+                                </section>
+                                <section>
+                                    <h5>Proficiency</h5>
+                                    <ul>
+                                        <li data-bind="text: proficiency"></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h5>Usage</h5>
+                                    <p>Used in
+                                        <span data-bind="text: usageCount"></span> projects
+                                    </p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="algorithms">
+                <h3 class="text-center">Algorithms and Data Structures</h3>
+                <div class="row">
+                    <div data-bind="foreach: algorithms">
+                        <div class="col-sm-4 col-md-3 col-lg-2">
+                            <div class="algorithms-item">
+                                <h4 class="heading" data-bind="text: algorithm">Selection sort</h4>
+                                <div class="algorithm-item-body">
+                                    <span>Level of familiarity:</span>
+                                    <span data-bind="text: rating"></span>
+                                    <span>/ 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="patterns">
+                <h3 class="text-center">Design Patterns</h3>
+                <div class="row">
+                    <div data-bind="foreach: patterns">
+                        <div class="col-sm-4 col-md-3 col-lg-2">
+                            <div class="pattern-item">
+                                <h4 class="heading" data-bind="text: pattern">Selection sort</h4>
+                                <div class="pattern-item-body">
+                                    <span>Level of familiarity:</span>
+                                    <span data-bind="text: rating"></span>
+                                    <span>/ 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
         <section id="achievements" data-bind="visible: shownSection() === 'achievements'">
-            <h2>Achievements</h2>
             <section id="online-courses">
-                <ul class="items-zoomable" data-bind="foreach: onlineCourses">
-                    <li class="mooc-item">
-                        <h4 data-bind="text: course"></h4>
-                        <div>
-                            <p>Score:
-                                <span data-bind="text: score"></span>%
-                            </p>
-                            <p>Length:
-                                <span data-bind="text: length"></span> weeks
-                            </p>
-                            <p>Instructor(s):
-                                <span data-bind="text: instructors"></span>
-                            </p>
+                <h3 class="text-center">Finished Massive Open Online Courses</h3>
+                <div class="row">
+                    <ul class="items-zoomable" data-bind="foreach: onlineCourses">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <li class="mooc-item">
+                                <h4 data-bind="text: course"></h4>
+                                <div>
+                                    <p>Score:
+                                        <span data-bind="text: score"></span>%
+                                    </p>
+                                    <p>Length:
+                                        <span data-bind="text: length"></span> weeks
+                                    </p>
+                                    <p>Instructor(s):
+                                        <span data-bind="text: instructors"></span>
+                                    </p>
+                                </div>
+                                <footer>
+                                    <p>
+                                        <small>University:
+                                            <span data-bind="text: university"></span>
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>Platform:
+                                            <span data-bind="text: platform"></span>
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>Finished: <span data-bind="text: finished"></span>
+                                        </small>
+                                    </p>
+                                </footer>
+                            </li>
                         </div>
-                        <footer>
-                            <p>
-                                <small>University:
-                                    <span data-bind="text: university"></span>
-                                </small>
-                            </p>
-                            <p>
-                                <small>Platform:
-                                    <span data-bind="text: platform"></span>
-                                </small>
-                            </p>
-                            <p>
-                                <small>Finished: <span data-bind="text: finished"></span>
-                                </small>
-                            </p>
-                        </footer>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </section>
         </section>
     </main>
