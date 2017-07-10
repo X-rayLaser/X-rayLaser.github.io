@@ -36,6 +36,14 @@ function OnlineCourse(courseName, score, length, instructors,
     };
 }
 
+function WebApplication(name,link, screenshots) {
+        return {
+                appName: name,
+                appLink: link,
+                screenshots: screenshots
+        };
+}
+
 var languages = [];
 
 languages.push(Language("C++", "More than 1 year", "*Worked on last project in December 2014",
@@ -164,3 +172,14 @@ onlineCourses.push(OnlineCourse("Principles of Computing (Part 1)", 83.0, "4 wee
 
 onlineCourses.push(OnlineCourse("An Introduction to Interactive Programming in Python (Part 1)", 95.9, "4 weeks",
         "Scott Rixner, Professor; Joe Warren, Professor; John Greiner, Lecturer; Stephen Wong, Lecturer", "Rice University", "Coursera", "in June 2015"));
+
+var webApplications = [];
+
+webApplications.push(WebApplication("Places Nearby",
+        "https://dry-falls-51573.herokuapp.com",
+        [
+                "images/web_applications/places_nearby/1.png",
+                "images/web_applications/places_nearby/2.png",
+                "images/web_applications/places_nearby/3.png",
+        ])
+);

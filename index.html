@@ -34,7 +34,7 @@
     <nav id="main-navbar">
         <ul class="nav nav-pills">
             <li role="presentation" class="active">
-                <a href="#">Home</a>
+                <a href="#about">About myself</a>
             </li>
             <li role="presentation">
                 <a href="#portfolio">Portfolio</a>
@@ -50,20 +50,24 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <section>
+    <main class="container-fluid">
+        <section id="about" data-bind="visible: shownSection() === 'about'">
             <h2>Hello and welcome!</h2>
-            <p>
-                My name is Eugene Dolotow. I am an aspiring web developer living in Russia. I finished Siberian State Industrial University in 2013 with a master's degree in
-                Metallurgy. Since that time I've learned many programming languages and technologies as well as different programming paradigms such as object-oriented programming and
-                a bit of functional programming.
-            </p>
-            <p>
-                In the course of last few years I introduced myself to unit-testing, design patterns, algorithms and data structures. I acquired an experience and understanding of how to
-                write safe multi-threaded code. I familiarized myself with several programming methodologies such as DRY, KISS and TDD. In particular, I am trying to follow TDD methodology when working on something of critical importance. And I have experience using Git for version control.
-            </p>
-            <p>My journey into the world of programming started with Delphi. Then I gradually migrated to C and C++ where I became fully commited to programming for the first time. Back then I was fascinated by different compression algorithms and file formats and used to reinvent the wheel a lot by writing image readers, pdf parsers and other stuff. A year after that I had a firm grasp of C++ and object-oriented programming. Then I moved to Java, and later to Python.
-            </p>
+            <div class="row">
+                <div class="col-sm-6">
+                <p>
+                    My name is Eugene Dolotow. I am an aspiring web developer living in Russia. I finished Siberian State Industrial University in 2013 with a master's degree in
+                    Metallurgy. Since that time I've learned many programming languages and technologies as well as different programming paradigms such as object-oriented programming and
+                    a bit of functional programming.
+                </p>
+                <p>
+                    In the course of last few years I introduced myself to unit-testing, design patterns, algorithms and data structures. I acquired an experience and understanding of how to
+                    write safe multi-threaded code. I familiarized myself with several programming methodologies such as DRY, KISS and TDD. In particular, I am trying to follow TDD methodology when working on something of critical importance. And I have experience using Git for version control.
+                </p>
+                <p>My journey into the world of programming started with Delphi. Then I gradually migrated to C and C++ where I became fully commited to programming for the first time. Back then I was fascinated by different compression algorithms and file formats and used to reinvent the wheel a lot by writing image readers, pdf parsers and other stuff. A year after that I had a firm grasp of C++ and object-oriented programming. Then I moved to Java, and later to Python.
+                </p>
+                </div>
+                <div class="col-sm-6">
             <p>
                 As of right now, I am mostly focused on web development. Specifically, I am learning Python Django and using it in a couple of side projects. I also know well HTML, CSS, SASS/SCSS and familiar with JQuery and Bootstrap. I know how to make beautiful responsive web pages that look good on both large and small screens. In the near future I am going to keep improving my fluency in Python/Django as well as learning other technologies and frameworks. My final goal is to become full-stack developer.
             </p>
@@ -72,9 +76,43 @@
             <p>
                 I am also a huge fan of massive online open courses. Over the last two years I have finished more than a dozen of MOOCs on Coursera and Edx. I am constantly trying to improve myself, close knowledge gaps that I might have and stay sharp.
             </p>
+                </div>
         </section>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
+        <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
+            <h2 class="text-center">Portfolio</h2>
+            <nav class="my-menu">
+                <button id="show-xs" class="my-menu-btn-active">Web applications</button>
+                <button id="show-sm">Web pages design</button>
+                <button id="show-sm">Software</button>
+            </nav>
+            <section data-bind="foreach: webApps">
+                <article>
+                    <h3>
+                        <a data-bind="attr: { href: appLink }, text: appName"></a>
+                    </h3>
+                    <section>
+                        <img alt="app_screenshot" data-bind="attr: { src: 'detailImgSrc' }">
+                        <ul data-bind="foreach: screenshots">
+                            <li>
+                                <img data-bind="attr: { src: $data }"> 
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Description</h4>
+                        <p>Insert Some text here</p>
+                    </section>
+                    <section>
+                        <h4>Technologies used</h4>
+                        <p>Insert Some text here</p>
+                    </section>
+                    <section>
+                        <p>Project status: <span>almost finished</span></p>
+                    </section>
+                </article>
+            </section>
+            
+            
             <nav class="my-menu">
                 <button id="show-xs" class="my-menu-btn-active">Extra small (425px)</button>
                 <button id="show-sm">Small (768px)</button>
@@ -147,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section id="skills">
+        <section id="skills" data-bind="visible: shownSection() === 'skills'">
             <h2>Skills</h2>
             <section id="languages">
             </section>
@@ -158,7 +196,7 @@
             <section id="patterns">
             </section>
         </section>
-        <section id="achievements">
+        <section id="achievements" data-bind="visible: shownSection() === 'achievements'">
             <h2>Achievements</h2>
             <section id="online-courses">
             </section>
@@ -169,4 +207,9 @@
         <p>E-mail: <span>supernovaprotocol@gmail.com</span></p>
         <p>E-mail: <span>eugenyi5653@yahoo.com</span></p>
     </footer>
+    <script type="text/javascript" src="js/sammy-latest.min.js"></script>
+    <script type="application/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js">
+    </script>
+    <script type="application/javascript" src="js/main.js">
+    </script>
 </body>
