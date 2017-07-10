@@ -25,7 +25,7 @@
     <nav id="main-navbar">
         <ul class="nav nav-pills">
             <li role="presentation" class="active">
-                <a href="#about">About myself</a>
+                <a href="#about">About me</a>
             </li>
             <li role="presentation">
                 <a href="#portfolio">Portfolio</a>
@@ -72,109 +72,126 @@
         <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
             <h2 class="text-center">Portfolio</h2>
             <nav class="my-menu">
-                <button class="my-menu-btn-active">Web applications</button>
-                <button>Web pages design</button>
-                <button>Software</button>
+                <button data-bind="click: showWebApps">Web applications</button>
+                <button data-bind="click: showDesignedPages">Web pages design</button>
             </nav>
-            <section data-bind="foreach: webApps">
-                <article>
-                    <h3>
-                        <a data-bind="attr: { href: appLink }, text: appName"></a>
+            <section id="web-apps" data-bind="foreach: webApps">
+                <article class="webapp-item">
+                    <h3 class="text-center">
+                        <a target="_blank" data-bind="attr: { href: appLink }, text: appName"></a>
                     </h3>
-                    <section>
-                        <img alt="app_screenshot" data-bind="attr: { src: $parent.detailImgSrc }">
-                        <ul data-bind="foreach: screenshots">
-                            <li>
-                                <img data-bind="attr: { src: $data }"> 
+                    <div class="webapp-item-images">
+                        <ul class="slides" data-bind="foreach: screenshots">
+                            <li class="slides-item" data-bind="click: $root.setDetail">
+                                <img class="img-thumbnail" data-bind="attr: { src: $data }"> 
                             </li>
                         </ul>
-                    </section>
-                    <section>
-                        <h4>Description</h4>
-                        <p>Insert Some text here</p>
-                    </section>
-                    <section>
+                        <img class="img-responsive img-thumbnail" alt="app_screenshot" data-bind="attr: { src: $parent.detailImgSrc }">
+                    </div>
+                    <section class="webapp-item-tags">
                         <h4>Technologies used</h4>
-                        <p>Insert Some text here</p>
+                        <div data-bind="foreach: techTags">
+                            <span class="tag-item" data-bind="text: $data"></span>
+                        </div>
                     </section>
                     <section>
                         <p>Project status: <span>almost finished</span></p>
                     </section>
+                    <section>
+                        <p>Deployed to Heroku</p>
+                    </section>
+                    <section>
+                        <h4>Description</h4>
+                        <p>This is a typical Google Maps based application. It allows visitors to find
+                            different places around their current location.
+                            User can choose a category of a place to search for and radius of search area. Also he/she is able
+                            to order search results by prominence, rating or distance or hide some of the results based on some criteria (e.g. hide items without rating).
+                            Each search result may contain a name of the place, it's photo, randomly chosen review and rating. 
+                        </p>
+                        <p>Visitors can get more information about a chosen place by clicking on it's name.
+                            This will direct them at another page which has several sections.
+                            Information section contains general information about the place such as phone
+                            number, address, location on the map. Reviews section contains testimonials left
+                            by users. Finally, the photos section contains up to 10 photos of
+                            the place. 
+                        </p>
+                    </section>
                 </article>
             </section>
             
-            
-            <nav class="my-menu">
-                <button id="show-xs" class="my-menu-btn-active">Extra small (425px)</button>
-                <button id="show-sm">Small (768px)</button>
-                <button id="show-md">Medium (1024px)</button>
-                <button id="show-lg">Large (1200px)</button>
-                <button id="show-xl">Extra large (1920px)</button>
-            </nav>
-            <div class="container-fluid">
-                <div id="extra-small-screens" class="row my-image-group">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <img src="images/screenshots/webpage01/320x887.png">
+            <section id="designed-pages" class="hidden">
+                <nav class="my-menu">
+                    <button id="show-xs" class="my-menu-btn-active">Extra small (425px)</button>
+                    <button id="show-sm">Small (768px)</button>
+                    <button id="show-md">Medium (1024px)</button>
+                    <button id="show-lg">Large (1200px)</button>
+                    <button id="show-xl">Extra large (1920px)</button>
+                </nav>
+                <div class="container-fluid">
+                    <div id="extra-small-screens" class="row my-image-group">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <img src="images/screenshots/webpage01/320x887.png">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <img src="images/screenshots/webpage02/320x887.png">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <img src="images/screenshots/webpage04/320x887.png">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <img src="images/screenshots/webpage05/320x887.png">
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <img src="images/screenshots/webpage02/320x887.png">
+                    <div id="small-screens" class="row my-image-group hidden">
+                        <div class="col-md-6 col-lg-4">
+                            <img src="images/screenshots/webpage01/768x887.png">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <img src="images/screenshots/webpage02/768x887.png">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <img src="images/screenshots/webpage04/768x887.png">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <img src="images/screenshots/webpage05/768x887.png">
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <img src="images/screenshots/webpage04/320x887.png">
+                    <div id="medium-screens" class="row my-image-group hidden">
+                        <div class="col-md-6">
+                            <img src="images/screenshots/webpage01/1024x887.png">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/screenshots/webpage02/1024x887.png">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/screenshots/webpage04/1024x887.png">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/screenshots/webpage05/1024x887.png">
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <img src="images/screenshots/webpage05/320x887.png">
+                    <div id="large-screens" class="row my-image-group hidden">
+                        <div class="col-lg-6">
+                            <img src="images/screenshots/webpage01/1200x838.png">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/screenshots/webpage02/1200x887.png">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/screenshots/webpage04/1200x887.png">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/screenshots/webpage05/1200x887.png">
+                        </div>
+                    </div>
+                    <div id="extra-large-screens" class="row my-image-group hidden">
+                        <img src="images/screenshots/webpage01/1920x1080.png">
+                        <img src="images/screenshots/webpage02/1920x1080.png">
+                        <img src="images/screenshots/webpage04/1920x1080.png">
+                        <img src="images/screenshots/webpage05/1920x1080.png">
                     </div>
                 </div>
-                <div id="small-screens" class="row my-image-group hidden">
-                    <div class="col-md-6 col-lg-4">
-                        <img src="images/screenshots/webpage01/768x887.png">
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <img src="images/screenshots/webpage02/768x887.png">
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <img src="images/screenshots/webpage04/768x887.png">
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <img src="images/screenshots/webpage05/768x887.png">
-                    </div>
-                </div>
-                <div id="medium-screens" class="row my-image-group hidden">
-                    <div class="col-md-6">
-                        <img src="images/screenshots/webpage01/1024x887.png">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/screenshots/webpage02/1024x887.png">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/screenshots/webpage04/1024x887.png">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/screenshots/webpage05/1024x887.png">
-                    </div>
-                </div>
-                <div id="large-screens" class="row my-image-group hidden">
-                    <div class="col-lg-6">
-                        <img src="images/screenshots/webpage01/1200x838.png">
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="images/screenshots/webpage02/1200x887.png">
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="images/screenshots/webpage04/1200x887.png">
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="images/screenshots/webpage05/1200x887.png">
-                    </div>
-                </div>
-                <div id="extra-large-screens" class="row my-image-group hidden">
-                    <img src="images/screenshots/webpage01/1920x1080.png">
-                    <img src="images/screenshots/webpage02/1920x1080.png">
-                    <img src="images/screenshots/webpage04/1920x1080.png">
-                    <img src="images/screenshots/webpage05/1920x1080.png">
-                </div>
-            </div>
+            </section>
         </section>
         <section id="skills" data-bind="visible: shownSection() === 'skills'">
             <h2>Skills</h2>
@@ -192,21 +209,32 @@
             <section id="online-courses">
                 <ul class="items-zoomable" data-bind="foreach: onlineCourses">
                     <li class="mooc-item">
-                        <h4>Advanced Styling with Responsive Design</h4>
+                        <h4 data-bind="text: course"></h4>
                         <div>
-                            <p>Score: 93.3%</p>
-                            <p>Length: 4 weeks</p>
-                            <p>Instructor(s): Colleen van Lent, Ph.D.</p>
+                            <p>Score:
+                                <span data-bind="text: score"></span>%
+                            </p>
+                            <p>Length:
+                                <span data-bind="text: length"></span> weeks
+                            </p>
+                            <p>Instructor(s):
+                                <span data-bind="text: instructors"></span>
+                            </p>
                         </div>
                         <footer>
                             <p>
-                                <small>University: University of Michigan</small>
+                                <small>University:
+                                    <span data-bind="text: university"></span>
+                                </small>
                             </p>
                             <p>
-                                <small>Platform: Coursera</small>
+                                <small>Platform:
+                                    <span data-bind="text: platform"></span>
+                                </small>
                             </p>
                             <p>
-                                <small>Finished: in August 2016</small>
+                                <small>Finished: <span data-bind="text: finished"></span>
+                                </small>
                             </p>
                         </footer>
                     </li>

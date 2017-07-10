@@ -1,0 +1,45 @@
+.webapp-item {
+    padding: 10px 20px;
+    
+    .webapp-item-images {
+    }
+    
+    .slides {
+        list-style-type: none;
+        margin: 0;
+        background: #270d4e;
+        padding: 10px;
+        text-align: center;
+        
+        .slides-item {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            
+            width: 100px;
+            cursor: pointer;
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+    
+    .webapp-item-tags {
+        padding: 20px 0;
+        
+        .tag-item {
+            background: #e0d7ea;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 5px;
+            color: #131d63;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .tag-item:first-child {
+            margin: 0;
+        }
+    }
+}

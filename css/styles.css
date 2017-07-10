@@ -257,4 +257,33 @@ main ul {
 .half-filled {
   background: rgba(100, 125, 220, 0.5); }
 
+.webapp-item {
+  padding: 10px 20px; }
+  .webapp-item .slides {
+    list-style-type: none;
+    margin: 0;
+    background: #270d4e;
+    padding: 10px;
+    text-align: center; }
+    .webapp-item .slides .slides-item {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      width: 100px;
+      cursor: pointer; }
+      .webapp-item .slides .slides-item img {
+        width: 100%; }
+  .webapp-item .webapp-item-tags {
+    padding: 20px 0; }
+    .webapp-item .webapp-item-tags .tag-item {
+      background: #e0d7ea;
+      border-radius: 50px;
+      padding: 10px;
+      margin: 5px;
+      color: #131d63;
+      font-weight: bold;
+      display: inline-block; }
+    .webapp-item .webapp-item-tags .tag-item:first-child {
+      margin: 0; }
+
 /*# sourceMappingURL=styles.css.map */

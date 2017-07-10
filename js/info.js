@@ -36,11 +36,12 @@ function OnlineCourse(courseName, score, length, instructors,
     };
 }
 
-function WebApplication(name,link, screenshots) {
+function WebApplication(name, link, screenshots, tags) {
         return {
                 appName: name,
                 appLink: link,
-                screenshots: screenshots
+                screenshots: screenshots,
+                techTags: tags
         };
 }
 
@@ -181,5 +182,17 @@ webApplications.push(WebApplication("Places Nearby",
                 "images/web_applications/places_nearby/1.png",
                 "images/web_applications/places_nearby/2.png",
                 "images/web_applications/places_nearby/3.png",
+                "images/web_applications/places_nearby/4.png",
+                "images/web_applications/places_nearby/5.png",
+        ],
+        [
+                "Google Places API",
+                "Flask",
+                "Bootstrap",
+                "JQuery",
+                "KnockoutJS",
+                "NPM",
+                "Gulp",
+                "SASS"
         ])
 );
