@@ -1,0 +1,17 @@
+@media all and (min-width:768px) {
+    .items-zoomable > li {
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -webkit-transition: transform 1s;
+        transition: transform 1s;
+    }
+    
+    .items-zoomable > li:hover {
+        -ms-transform: scale(1.5, 1.5);
+        -o-transform: scale(1.5, 1.5);
+        -moz-transform: scale(1.5, 1.5);
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5,1.5);
+    }
+}

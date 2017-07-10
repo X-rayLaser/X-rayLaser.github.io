@@ -1,0 +1,260 @@
+.algorithms-item span,
+.pattern-item span {
+  color: #fdffad; }
+
+.algorithms-item h4,
+.pattern-item h4 {
+  height: auto; }
+
+.pattern-item p {
+  padding: 0 20px; }
+
+body {
+  margin: 0; }
+
+header {
+  height: 280px;
+  background-image: url("../images/header-image.png"); }
+
+@media all and (min-width: 768px) {
+  header {
+    height: 580px; } }
+nav ul {
+  background: #384071; }
+
+nav ul.nav a {
+  color: white; }
+
+nav ul.nav a:hover {
+  color: #2260a0; }
+
+main > section {
+  padding: 0 1%; }
+
+main + footer {
+  background: #074367;
+  padding: 30px 0;
+  text-align: center;
+  color: #ffffff; }
+
+main + footer h2 {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+main + footer p {
+  padding: 20px;
+  background: radial-gradient(#2260a0, #074367);
+  width: 95%;
+  margin: auto;
+  border-radius: 50px; }
+
+main + footer a {
+  color: white; }
+
+main + footer a:hover {
+  color: #59c16a; }
+
+@media all and (min-width: 768px) {
+  main + footer p {
+    width: 40%; } }
+.carousel {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.carousel .carousel-inner figure {
+  background: #d7daec; }
+
+.carousel .carousel-inner img {
+  margin: auto;
+  display: block;
+  width: 95%; }
+
+.carousel .carousel-inner img.xs {
+  max-width: 320px; }
+
+.carousel .carousel-inner img.sm-425 {
+  max-width: 425px; }
+
+.carousel .carousel-inner img.sm-768 {
+  max-width: 768px; }
+
+.carousel .carousel-inner img.md {
+  max-width: 1024px; }
+
+.carousel .carousel-inner img.lg {
+  max-width: 1200px; }
+
+.carousel .carousel-inner img.xl {
+  max-width: 1920px; }
+
+.my-image-group {
+  margin: 20px 0; }
+
+.my-image-group img {
+  width: 100%;
+  margin: 10px 0;
+  border: 3px solid #2d2479;
+  border-radius: 25px; }
+
+@media all and (min-width: 768px) {
+  .items-zoomable > li {
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -webkit-transition: transform 1s;
+    transition: transform 1s; }
+
+  .items-zoomable > li:hover {
+    -ms-transform: scale(1.5, 1.5);
+    -o-transform: scale(1.5, 1.5);
+    -moz-transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5); } }
+.language-item small {
+  color: grey; }
+
+.language-item section {
+  padding: 10px;
+  border-bottom: 2px solid #000000;
+  color: #ffffff; }
+
+.language-item section:first-of-type {
+  border-top: none; }
+
+.language-item section:last-of-type {
+  border-bottom: none; }
+
+.language-item h4 {
+  height: auto; }
+
+.language-item ul {
+  list-style: square; }
+
+.language-item li {
+  display: block;
+  box-shadow: none;
+  width: auto;
+  background: transparent;
+  margin: 0; }
+
+.language-item p {
+  text-align: center; }
+
+.language-item li {
+  text-align: center; }
+
+.language-item h5 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.25em; }
+
+.language-item section:nth-of-type(1) {
+  background: #514c75; }
+
+.language-item section:nth-of-type(2) {
+  background: #59c16a; }
+
+.language-item section:nth-of-type(3) {
+  background: #266330; }
+
+.my-menu {
+  text-align: center; }
+
+.my-menu button {
+  border-radius: 15px;
+  padding: 10px 0;
+  border: 3px solid #d69b9b;
+  background: #f3e6e6;
+  width: 180px;
+  margin: 10px; }
+
+.my-menu button:hover {
+  background: #965b4b; }
+
+.my-menu button.my-menu-btn-active {
+  background: #402071;
+  color: #ffca00;
+  font-weight: bold;
+  border-color: #000000; }
+
+main ul {
+  list-style-type: none;
+  padding: 0; }
+
+.mooc-item {
+  box-sizing: border-box;
+  background: #a7a6ab;
+  box-shadow: 2px 2px 11px 3px #000000;
+  margin: 20px auto;
+  width: 95%; }
+
+.mooc-item h4 {
+  box-sizing: border-box;
+  background: radial-gradient(#647ddc, #28284a);
+  margin: 0;
+  padding: 15px;
+  line-height: 1.5em;
+  text-align: center;
+  color: white; }
+
+.mooc-item div {
+  padding: 20px; }
+
+.mooc-item footer {
+  padding: 20px;
+  background: #3c3c5d; }
+
+.mooc-item footer p {
+  color: lightgrey;
+  line-height: 0.75em; }
+
+.mooc-item footer p:last-child {
+  margin-bottom: 0; }
+
+.mooc-item div p:first-child {
+  color: #fdffad; }
+
+@media all and (min-width: 768px) {
+  .mooc-item {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    margin: 20px; }
+
+  .mooc-item h4 {
+    height: 110px; }
+
+  .mooc-item div p:nth-child(3) {
+    height: 5.5em;
+    overflow: hidden; } }
+.my-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%; }
+
+.rating {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0;
+  height: 1em; }
+
+.circle {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  border: 3px solid #647ddc;
+  padding: 0;
+  margin: 0 1px; }
+
+.filled {
+  background: #5b5ad0; }
+
+.half-filled {
+  background: rgba(100, 125, 220, 0.5); }
+
+/*# sourceMappingURL=styles.css.map */

@@ -94,35 +94,6 @@ $(document).ready(function() {
         });
     }
     
-    function fillinCourses() {
-        var coursesSection = document.getElementById("online-courses");
-        $(coursesSection).append("<h3>Finished online courses</h3>");
-        $(coursesSection).append("<ul class='items-zoomable'></ul>");
-        var $courselist = $($(coursesSection).children()[1]);
-        
-        onlineCourses.forEach(function(item, index) {
-            $courselist.append("<li></li>");
-            var $listItem = $($courselist.children()[index]);
-            
-            $listItem.append("<h4>" + item.course + "</h4>");
-            $listItem.append("<div></div>");
-            
-            var $divElement = $($listItem.children()[1]);
-            
-            $divElement.append("<p>Score: " + item.score + "%</p>");
-            $divElement.append("<p>Length: " + item.length + "</p>");
-            $divElement.append("<p>Instructor(s): " + item.instructors + "</p>");
-            
-            $listItem.append("<footer></footer>");
-            
-            var $footerElement = $($listItem.children()[2]);
-            $footerElement.append("<p><small>University: " + item.university + "</small></p>");
-            $footerElement.append("<p><small>Platform: " + item.platform + "</small></p>");
-            $footerElement.append("<p><small>Finished: " + item.finished + "</small></p>");
-        });
-        
-    }
-    
     var langSection = document.getElementById("languages");
     var libSection = document.getElementById("libraries");
     fillinSection(langSection, "Programming Languages", languages);
@@ -130,7 +101,6 @@ $(document).ready(function() {
     
     fillinAlgos();
     fillinPatterns();
-    fillinCourses();
     
     
     var xsElement = document.getElementById("extra-small-screens");

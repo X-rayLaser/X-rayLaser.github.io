@@ -1,0 +1,23 @@
+.my-menu {
+    text-align: center;
+}
+
+.my-menu button {
+    border-radius: 15px;
+    padding: 10px 0;
+    border: 3px solid #d69b9b;
+    background: #f3e6e6;
+    width: 180px;
+    margin: 10px;
+}
+
+.my-menu button:hover {
+    background: #965b4b;
+}
+
+.my-menu button.my-menu-btn-active {
+    background: #402071;
+    color: rgb(255, 202, 0);
+    font-weight: bold;
+    border-color: #000000;
+}

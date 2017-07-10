@@ -7,9 +7,6 @@
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -19,14 +16,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     </script>
-    
-    <script src="js/info.js">
-    </script>
-    
-    <script src="js/script.js">
-    </script>
-    
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
     <header>
@@ -81,9 +72,9 @@
         <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
             <h2 class="text-center">Portfolio</h2>
             <nav class="my-menu">
-                <button id="show-xs" class="my-menu-btn-active">Web applications</button>
-                <button id="show-sm">Web pages design</button>
-                <button id="show-sm">Software</button>
+                <button class="my-menu-btn-active">Web applications</button>
+                <button>Web pages design</button>
+                <button>Software</button>
             </nav>
             <section data-bind="foreach: webApps">
                 <article>
@@ -91,7 +82,7 @@
                         <a data-bind="attr: { href: appLink }, text: appName"></a>
                     </h3>
                     <section>
-                        <img alt="app_screenshot" data-bind="attr: { src: 'detailImgSrc' }">
+                        <img alt="app_screenshot" data-bind="attr: { src: $parent.detailImgSrc }">
                         <ul data-bind="foreach: screenshots">
                             <li>
                                 <img data-bind="attr: { src: $data }"> 
@@ -199,6 +190,27 @@
         <section id="achievements" data-bind="visible: shownSection() === 'achievements'">
             <h2>Achievements</h2>
             <section id="online-courses">
+                <ul class="items-zoomable" data-bind="foreach: onlineCourses">
+                    <li class="mooc-item">
+                        <h4>Advanced Styling with Responsive Design</h4>
+                        <div>
+                            <p>Score: 93.3%</p>
+                            <p>Length: 4 weeks</p>
+                            <p>Instructor(s): Colleen van Lent, Ph.D.</p>
+                        </div>
+                        <footer>
+                            <p>
+                                <small>University: University of Michigan</small>
+                            </p>
+                            <p>
+                                <small>Platform: Coursera</small>
+                            </p>
+                            <p>
+                                <small>Finished: in August 2016</small>
+                            </p>
+                        </footer>
+                    </li>
+                </ul>
             </section>
         </section>
     </main>
@@ -210,6 +222,13 @@
     <script type="text/javascript" src="js/sammy-latest.min.js"></script>
     <script type="application/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js">
     </script>
+    
+    <script src="js/info.js">
+    </script>
+    
+    <script src="js/script.js">
+    </script>
+    
     <script type="application/javascript" src="js/main.js">
     </script>
 </body>
