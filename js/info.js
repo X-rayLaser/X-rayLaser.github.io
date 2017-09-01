@@ -104,6 +104,18 @@ algorithms.push(Algorithm("Binary trees", 3.5));
 
 algorithms.push(Algorithm("Trie(s)", 4));
 
+algorithms.push(Algorithm("Hash tables"), 3);
+
+algorithms.push(Algorithm("Lists"), 5);
+
+algorithms.push(Algorithm("Arrays"), 5);
+
+algorithms.push(Algorithm("Stacks"), 4.5);
+
+algorithms.push(Algorithm("Queues"), 4);
+
+algorithms.push(Algorithm("Binary Search", 5));
+
 algorithms.push(Algorithm("Depth First Search", 4));
 
 algorithms.push(Algorithm("Breadth First Search", 3.5));
@@ -111,7 +123,6 @@ algorithms.push(Algorithm("Breadth First Search", 3.5));
 //algorithms.push(Algorithm("Kruskal's algorithm", 3));
 
 //algorithms.push(Algorithm("Dijkstra's algorithm", 1));
-
 
 
 var patterns = [];
@@ -122,7 +133,7 @@ patterns.push(Pattern("Strategy", 4, "sometimes"));
 
 patterns.push(Pattern("Observer", 4, "sometimes"));
 
-patterns.push(Pattern("Producer-consumer", 3.5, "sometimes"));
+patterns.push(Pattern("Producer-consumer", 2, "sometimes"));
 
 patterns.push(Pattern("Model-View-Controller", 3, "sometimes"));
 
@@ -132,13 +143,13 @@ patterns.push(Pattern("Decorator", 3.5, "once or twice"));
 
 patterns.push(Pattern("Command", 2.5, "once or twice"));
 
-patterns.push(Pattern("Visitor", 2.5, "once or twice"));
+//patterns.push(Pattern("Visitor", 2.5, "once or twice"));
 
 patterns.push(Pattern("Adapter", 2.5, "never"));
 
 patterns.push(Pattern("Composite Pattern", 2.5, "once or twice"));
 
-patterns.push(Pattern("Facade", 2.5, "never"));
+//patterns.push(Pattern("Facade", 2.5, "never"));
 
 patterns.push(Pattern("Constructor", 3, "sometimes"));
 
