@@ -104,15 +104,15 @@ algorithms.push(Algorithm("Binary trees", 3.5));
 
 algorithms.push(Algorithm("Trie(s)", 4));
 
-algorithms.push(Algorithm("Hash tables"), 3);
+algorithms.push(Algorithm("Hash tables", 3));
 
-algorithms.push(Algorithm("Lists"), 5);
+algorithms.push(Algorithm("Lists", 5));
 
-algorithms.push(Algorithm("Arrays"), 5);
+algorithms.push(Algorithm("Arrays", 5));
 
-algorithms.push(Algorithm("Stacks"), 4.5);
+algorithms.push(Algorithm("Stacks", 4.5));
 
-algorithms.push(Algorithm("Queues"), 4);
+algorithms.push(Algorithm("Queues", 4));
 
 algorithms.push(Algorithm("Binary Search", 5));
 
