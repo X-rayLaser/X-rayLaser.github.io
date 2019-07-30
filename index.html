@@ -41,7 +41,7 @@
             </li>
         </ul>
     </nav>
-    <main class="container-fluid">
+    <main class="container">
         <section id="about" data-bind="visible: shownSection() === 'about'">
             <h2>Hello and welcome!</h2>
             <div class="row">
@@ -70,122 +70,68 @@
                 </div>
         </section>
         <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
-            <h2 class="text-center">Portfolio</h2>
-            <nav class="my-menu">
-                <button data-bind="click: showWebApps">Web applications</button>
-                <button data-bind="click: showDesignedPages">Web pages design</button>
-            </nav>
-            <section id="web-apps" data-bind="foreach: webApps">
-                <article class="webapp-item">
-                    <h3 class="text-center">
-                        <a target="_blank" data-bind="attr: { href: appLink }, text: appName"></a>
-                    </h3>
-                    <div class="webapp-item-images">
-                        <ul class="slides" data-bind="foreach: screenshots">
-                            <li class="slides-item" data-bind="click: $root.setDetail">
-                                <img class="img-thumbnail" data-bind="attr: { src: $data }"> 
-                            </li>
-                        </ul>
-                        <img class="img-responsive img-thumbnail" alt="app_screenshot" data-bind="attr: { src: $parent.detailImgSrc }">
-                    </div>
-                    <section class="webapp-item-tags">
-                        <h4>Technologies used</h4>
-                        <div data-bind="foreach: techTags">
-                            <span class="tag-item" data-bind="text: $data"></span>
-                        </div>
-                    </section>
-                    <section>
-                        <h4>Description</h4>
-                        <p>This is a typical Google Maps based application. It allows visitors to find
-                            different places around their current location.
-                            User can choose a category of a place to search for and radius of search area. Also he/she is able
-                            to order search results by prominence, rating or distance or hide some of the results based on some criteria (e.g. hide items without rating).
-                            Each search result may contain a name of the place, it's photo, randomly chosen review and rating. 
-                        </p>
-                        <p>Visitors can get more information about a chosen place by clicking on it's name.
-                            This will direct them at another page which has several sections.
-                            Information section contains general information about the place such as phone
-                            number, address, location on the map. Reviews section contains testimonials left
-                            by users. Finally, the photos section contains up to 10 photos of
-                            the place. 
-                        </p>
-                    </section>
-                </article>
-            </section>
-            
-            <section id="designed-pages" class="hidden">
-                <nav class="my-menu">
-                    <button id="show-xs" class="my-menu-btn-active">Extra small (425px)</button>
-                    <button id="show-sm">Small (768px)</button>
-                    <button id="show-md">Medium (1024px)</button>
-                    <button id="show-lg">Large (1200px)</button>
-                    <button id="show-xl">Extra large (1920px)</button>
-                </nav>
-                <div class="container-fluid">
-                    <div id="extra-small-screens" class="row my-image-group">
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="images/screenshots/webpage01/320x887.png">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="images/screenshots/webpage02/320x887.png">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="images/screenshots/webpage04/320x887.png">
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="images/screenshots/webpage05/320x887.png">
-                        </div>
-                    </div>
-                    <div id="small-screens" class="row my-image-group hidden">
-                        <div class="col-md-6 col-lg-4">
-                            <img src="images/screenshots/webpage01/768x887.png">
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <img src="images/screenshots/webpage02/768x887.png">
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <img src="images/screenshots/webpage04/768x887.png">
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <img src="images/screenshots/webpage05/768x887.png">
-                        </div>
-                    </div>
-                    <div id="medium-screens" class="row my-image-group hidden">
-                        <div class="col-md-6">
-                            <img src="images/screenshots/webpage01/1024x887.png">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="images/screenshots/webpage02/1024x887.png">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="images/screenshots/webpage04/1024x887.png">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="images/screenshots/webpage05/1024x887.png">
-                        </div>
-                    </div>
-                    <div id="large-screens" class="row my-image-group hidden">
-                        <div class="col-lg-6">
-                            <img src="images/screenshots/webpage01/1200x838.png">
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="images/screenshots/webpage02/1200x887.png">
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="images/screenshots/webpage04/1200x887.png">
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="images/screenshots/webpage05/1200x887.png">
-                        </div>
-                    </div>
-                    <div id="extra-large-screens" class="row my-image-group hidden">
-                        <img src="images/screenshots/webpage01/1920x1080.png">
-                        <img src="images/screenshots/webpage02/1920x1080.png">
-                        <img src="images/screenshots/webpage04/1920x1080.png">
-                        <img src="images/screenshots/webpage05/1920x1080.png">
-                    </div>
-                </div>
-            </section>
+            <h2 class="text-center">Finished projects</h2>
+            <article class="webapp-item">
+                <h4 class="text-center">Recognizing hand-written mathematical expressions</h4>
+                <p>In this project, I have created a GUI app that asks users 
+                    to draw a mathematical expression and outputs a 
+                    corresponding TeX markup. The app consists of 2 main 
+                    components: the object detection pipeline and custom 
+                    logic layer.</p>
+                <p>Object detection pipeline consists of a classifier 
+                    implemented as a convolutional neural network and 
+                    an algorithm responsible for characters localization. 
+                    The logic layer takes the bounding boxes produced by 
+                    object detection pipeline and builds final TeX markup.</p>
+                <p>The classifier network was trained on 2 datasets 
+                    merged into one. One of these datasets is MNIST dataset 
+                    containing images of hand-written digits. The other 
+                    dataset containing math symbols was taken from Kaggle.</p>
+                <a href="https://github.com/X-rayLaser/handwriting-2-TeX">Github repository</a>
+                <a href="#">A blog post</a>
+            </article>
+            <article class="webapp-item">
+                <h4 class="text-center">Convolutional sliding window for MNIST digits detection</h4>
+                <p>After finishing this project I learned how to apply 
+                    convolutional neural nets to the problem of object 
+                    detection. In particular, I learned how to build 
+                    and train convolutional neural networks in Keras, 
+                    how to perform convolutional sliding window for 
+                    object detection and how to use it to draw bounding 
+                    boxes around objects. Additionally, I learned how to 
+                    implement Non-Max Suppression algorithm to increase 
+                    the robustness of object detection pipeline.</p>
+                    <p>For demonstration purposes, I have written a script 
+                    that generates small images with MNIST digits in 
+                    random positions.  The image is fed into an object 
+                    detection pipeline to draw bounding boxes.</p>
+                
+                <ul>
+                    <li>
+                        <a href="https://github.com/X-rayLaser/convolutional-detector">Github repository</a>
+                    </li>
+                    <li>
+                        <a href="#">A blog post</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="webapp-item">
+                <h4 class="text-center">A Python library implementing feed-forward neural networks</h4>
+                <p>In this project, I have implemented a feed-forward neural 
+                    network almost from scratch in Python. The core of the 
+                    library is written using Numpy. 
+                    When writing the library I followed TDD paradigm. I 
+                    tried to keep code as clean and well designed as 
+                    possible.</p>
+                <p>Among the things that are implemented are forward 
+                    propagation, backward propagation, gradient descent, 
+                    loss functions (Quadratic and Cross-entropy losses), 
+                    activation functions (RELU, Sigmoid, Soft-max), 
+                    regularization (weight decay), saving and restoring 
+                    the model to/from a file.</p>
+                <p>The repository provides additional scripts demonstrating the library at work.</p>
+                <a href="https://github.com/X-rayLaser/DeepNetLib">Github repository</a>
+            </article>
         </section>
         <section id="skills" data-bind="visible: shownSection() === 'skills'">
             <h2 class="text-center">Skills</h2>
