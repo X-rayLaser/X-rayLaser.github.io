@@ -24,10 +24,10 @@
     </header>
     <nav id="main-navbar">
         <ul class="nav nav-pills">
-            <li role="presentation" class="active">
+            <li role="presentation">
                 <a href="#about">About me</a>
             </li>
-            <li role="presentation">
+            <li role="presentation" class="active">
                 <a href="#portfolio">Portfolio</a>
             </li>
             <li role="presentation">
@@ -70,9 +70,20 @@
                 </div>
         </section>
         <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
-            <h2 class="text-center">Finished projects</h2>
             <article class="webapp-item">
-                <h4 class="text-center">Recognizing hand-written mathematical expressions</h4>
+                <h2 class="text-center">On-line handwritten text recognition app</h4>
+                <img src="images/ml/on_line_htr.gif" alt="On-line HTR app demo gif" class="img-responsive">
+                <p>The app contains a canvas element where a user can draw/write some text, a panel for showing the output and additional UI elements.</p>
+                <p>The algorithm works as follows.</p>
+                <p>When a user writes something, their handwriting gets represented as a list of vectors. Each such vector contains x and y coordinates of each point plus an additional time component and an end-of-stroke flag. These vectors are transformed and normalized. The neural net takes this sequence of vectors and outputs a list of probability distributions over character classes. Then, a decoding algorithm turns the latter into the list of class labels. Finally, the algorithm maps each class label to a character using a lookup table to give the actual transcription text.</p>
+                <p>There are 2 decoding algorithms: best path decoding and token passing. For the token passing algorithm, there are 4 different (English) language models with different sizes.</p>
+                <p>The app uses a bidirectional LSTM with 1 hidden layer comprising 100 units and a soft-max layer containing 100 output units.</p>
+                <p>The neural net was trained on the IAM On-Line Handwriting Database (IAM-OnDB) using CTC objective function</p>
+                <a href="https://x-raylaser.github.io/handwritten-text-recognition-demo">App link</a>
+            </article>
+
+            <article class="webapp-item">
+                <h2 class="text-center">Recognizing hand-written mathematical expressions</h4>
                 <p>In this project, I have created a GUI app that asks users 
                     to draw a mathematical expression and outputs a 
                     corresponding TeX markup. The app consists of 2 main 
@@ -88,10 +99,9 @@
                     containing images of hand-written digits. The other 
                     dataset containing math symbols was taken from Kaggle.</p>
                 <a href="https://github.com/X-rayLaser/handwriting-2-TeX">Github repository</a>
-                <a href="#">A blog post</a>
             </article>
             <article class="webapp-item">
-                <h4 class="text-center">Convolutional sliding window for MNIST digits detection</h4>
+                <h2 class="text-center">Convolutional sliding window for MNIST digits detection</h4>
                 <p>After finishing this project I learned how to apply 
                     convolutional neural nets to the problem of object 
                     detection. In particular, I learned how to build 
@@ -110,13 +120,10 @@
                     <li>
                         <a href="https://github.com/X-rayLaser/convolutional-detector">Github repository</a>
                     </li>
-                    <li>
-                        <a href="#">A blog post</a>
-                    </li>
                 </ul>
             </article>
             <article class="webapp-item">
-                <h4 class="text-center">A Python library implementing feed-forward neural networks</h4>
+                <h2 class="text-center">A Python library implementing feed-forward neural networks</h4>
                 <p>In this project, I have implemented a feed-forward neural 
                     network almost from scratch in Python. The core of the 
                     library is written using Numpy. 

@@ -51,7 +51,7 @@ $(document).ready(function() {
                 }
             });
             
-            window.location = "#about";
+            window.location = "#portfolio";
         }).run();
     };
 
