@@ -71,6 +71,20 @@
         </section>
         <section id="portfolio" data-bind="visible: shownSection() === 'portfolio'">
             <article class="webapp-item">
+                <h2>Multi-Dimensional Recurrent Neural Networks: Paper implementation.</h2>
+                <p>A library built on top of TensorFlow implementing the model(s) described in <a href="https://arxiv.org/pdf/0705.2011.pdf">Alex Graves's paper.</a></p>
+                <p>The library comes with a set of custom Keras layers. Each layer can be seamlessly used in Keras to build a model and train it as usual.</p>
+                <span class="label label-primary">Python</span>
+                <span class="label label-primary">TensorFlow</span>
+                <span class="label label-primary">Keras</span>
+                <span class="label label-primary">Numpy</span>
+                <span class="label label-primary">Deep Learning</span>
+                <br />
+                <br />
+                <a href="https://github.com/X-rayLaser/multi-directional-mdrnn" target="blank">Github repository link</a>
+            </article>
+            <hr />
+            <article class="webapp-item">
                 <h2 class="text-center">On-line handwritten text recognition app</h4>
                 <img src="images/ml/on_line_htr.gif" alt="On-line HTR app demo gif" class="img-responsive">
                 <p>The app contains a canvas element where a user can draw/write some text, a panel for showing the output and additional UI elements.</p>
@@ -79,11 +93,23 @@
                 <p>There are 2 decoding algorithms: best path decoding and token passing. For the token passing algorithm, there are 4 different (English) language models with different sizes.</p>
                 <p>The app uses a bidirectional LSTM with 1 hidden layer comprising 100 units and a soft-max layer containing 100 output units.</p>
                 <p>The neural net was trained on the IAM On-Line Handwriting Database (IAM-OnDB) using CTC objective function</p>
-                <a href="https://x-raylaser.github.io/handwritten-text-recognition-demo">App link</a>
+                <span class="label label-primary">JavaScript</span>
+                <span class="label label-primary">TensorFlow</span>
+                <span class="label label-primary">Keras</span>
+                <span class="label label-primary">React</span>
+                <span class="label label-primary">Wasm</span>
+                <span class="label label-primary">Deep Learning</span>
+                <span class="label label-primary">Handwritten Text Recognition</span>
+                <br />
+                <br />
+                <a href="https://x-raylaser.github.io/handwritten-text-recognition-demo" target="blank">App link</a>
             </article>
-
+            <hr />
             <article class="webapp-item">
                 <h2 class="text-center">Recognizing hand-written mathematical expressions</h4>
+                <img src="images/ml/demo.gif" alt="Demo Gif demonstrating recognition of hand-written mathematical expressions" 
+                    class="img-responsive text-center"
+                    style="margin: auto;">
                 <p>In this project, I have created a GUI app that asks users 
                     to draw a mathematical expression and outputs a 
                     corresponding TeX markup. The app consists of 2 main 
@@ -98,8 +124,17 @@
                     merged into one. One of these datasets is MNIST dataset 
                     containing images of hand-written digits. The other 
                     dataset containing math symbols was taken from Kaggle.</p>
-                <a href="https://github.com/X-rayLaser/handwriting-2-TeX">Github repository</a>
+                <span class="label label-primary">Python</span>
+                <span class="label label-primary">PyQt</span>
+                <span class="label label-primary">TensorFlow</span>
+                <span class="label label-primary">Keras</span>
+                <span class="label label-primary">Deep Learning</span>
+                <span class="label label-primary">Recognition of Handwritten Mathematical Expressions</span>
+                <br />
+                <br />
+                <a href="https://github.com/X-rayLaser/handwriting-2-TeX" target="blank">Github repository</a>
             </article>
+            <hr />
             <article class="webapp-item">
                 <h2 class="text-center">Convolutional sliding window for MNIST digits detection</h4>
                 <p>After finishing this project I learned how to apply 
@@ -118,10 +153,11 @@
                 
                 <ul>
                     <li>
-                        <a href="https://github.com/X-rayLaser/convolutional-detector">Github repository</a>
+                        <a href="https://github.com/X-rayLaser/convolutional-detector" target="blank">Github repository</a>
                     </li>
                 </ul>
             </article>
+            <hr />
             <article class="webapp-item">
                 <h2 class="text-center">A Python library implementing feed-forward neural networks</h4>
                 <p>In this project, I have implemented a feed-forward neural 
@@ -137,7 +173,7 @@
                     regularization (weight decay), saving and restoring 
                     the model to/from a file.</p>
                 <p>The repository provides additional scripts demonstrating the library at work.</p>
-                <a href="https://github.com/X-rayLaser/DeepNetLib">Github repository</a>
+                <a href="https://github.com/X-rayLaser/DeepNetLib" target="blank">Github repository</a>
             </article>
         </section>
         <section id="skills" data-bind="visible: shownSection() === 'skills'">
